@@ -11,12 +11,12 @@ class OutputFile {
         new FileReader("address.txt")
       );
 
-      while ((strline = bfreader.readLine()) != null) {
-        StringTokenizer sttoken = new StringTokenizer(strline, ",");
+      while ((strline = bfreader.readLine()) != null) { //1行づつ取り出す
+        StringTokenizer sttoken = new StringTokenizer(strline, ","); //,を境に分割
 
-        System.out.print(sttoken.nextToken());
+        System.out.print(sttoken.nextToken());//1つ目のトークン
 
-        System.out.println(sttoken.nextToken());
+        System.out.println(sttoken.nextToken());//2つめのトークン
       }
 
       bfreader.close();

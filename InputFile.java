@@ -11,18 +11,19 @@ public class InputFile {
         new InputStreamReader(System.in)
       );
 
-      name = bfreader.readLine();
-      address = bfreader.readLine();
+      name = bfreader.readLine(); //1行づつ読み込む
+      address = bfreader.readLine();//1行づつ読み込む
 
       if ("".equals(name) || "".equals(address)) {
-        System.exit(1);
+        System.out.println("入力してください");
+        System.exit(1);//終了
       } else {
         try {
           BufferedWriter bfwriter = new BufferedWriter(
             new FileWriter("address.txt", true)
           );
-          bfwriter.write(name + "," + address);
-          bfwriter.newLine();
+          bfwriter.write(name + "," + address); //書き込む
+          bfwriter.newLine();//改行
           bfwriter.close();
         } catch (IOException err) {
           System.out.println("エラーです");

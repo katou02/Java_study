@@ -45,13 +45,14 @@ class RadioButton extends JFrame implements ActionListener {
   }
 
   public void actionPerformed(ActionEvent ae) {
-    String strCmd = ae.getActionCommand();
+    String strCmd = ae.getActionCommand();//イベントオブジェクトからボタンの文字列を取得
 
     if ("OK".equals(strCmd)) {
+      //一つ目のラジオボタンにチェックが入っている場合
       if (rb1.isSelected()) {
-        JOptionPane.showMessageDialog(this, "処理1");
+        JOptionPane.showMessageDialog(this,"会社員にチェックが入っています。");
       } else {
-        JOptionPane.showMessageDialog(this, "処理2");
+        JOptionPane.showMessageDialog(this,"学生にチェックが入っています。");
       }
     }
   }

@@ -4,9 +4,9 @@ class IDEnzan {
     int a = 1;
     int b = 1;
 
-    System.out.println(a++);
+    System.out.println(a++); //1 表示されてからプラス
 
-    System.out.println(++b);
+    System.out.println(++b); //2 プラスされてから表示
 
     int c = 1;
     int d = 1;

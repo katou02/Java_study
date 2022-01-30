@@ -7,7 +7,7 @@ public class SDFparse {
     try {
       SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
 
-      df.setLenient(false);
+      df.setLenient(false); //存在しない日付をチェック
 
       df.parse("2015/03/45");
     } catch (ParseException err) {

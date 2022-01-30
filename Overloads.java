@@ -1,5 +1,5 @@
 class Overloads {
-
+//オーバーロード 同じクラス内で同じメソッド名で引数の、データ型、数、順番、いずれかが異なるもの
   public static void main(String[] args) {
     Kaiin k1 = new Kaiin();
 

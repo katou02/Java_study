@@ -31,12 +31,12 @@ class Hinbankeishou extends Hinban {
   private int price;
 
   public Hinbankeishou(String name, int price) {
-    super(name);
+    super(name);//継承元のクラスのコンストラクトを呼び出す
     this.setPrice(price);
   }
 
   public void setPrice(int price) {
-    this.price = price;
+    this.price = price;//2500
   }
 
   public int getPrice() {

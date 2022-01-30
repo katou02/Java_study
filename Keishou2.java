@@ -29,7 +29,7 @@ class MemberKeishou extends Member {
   private int age;
 
   public MemberKeishou() {
-    this.setAge(30);
+    this.setAge(30);//自動でスーパークラスのコンストラクトが実行される
   }
 
   public void setAge(int age) {

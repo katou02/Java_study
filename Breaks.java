@@ -5,7 +5,7 @@ class Breaks {
 
     for (int i = 0; i < 5; i++) {
       if (i == 3) {
-        break;
+        break; //ループを抜ける
       }
 
       System.out.println(i);
@@ -15,7 +15,7 @@ class Breaks {
 
     for (int i = 0; i < 5; i++) {
       if (i == 3) {
-        continue;
+        continue; //飛ばす
       }
 
       System.out.println(i);

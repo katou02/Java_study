@@ -36,14 +36,14 @@ class Combo extends JFrame implements ActionListener {
   }
 
   public void actionPerformed(ActionEvent ae) {
-    String strCmd = ae.getActionCommand();
+    String strCmd = ae.getActionCommand();//イベントオブジェクトからボタンの文字列を取得
 
-    int sindex = comboShouhin.getSelectedIndex();
+    int sindex = comboShouhin.getSelectedIndex();//コンボボックスで選択されたインデックス番号を取得
 
-    String svalue = (String) comboShouhin.getSelectedItem();
+    String svalue = (String) comboShouhin.getSelectedItem();//コンボボックスで選択された値を取得
 
     if ("OK".equals(strCmd)) {
-      JOptionPane.showMessageDialog(this + sindex + svalue);
+      JOptionPane.showMessageDialog(this,"インデックス番号" + sindex + "の" + svalue + "が選択されました。");
     }
   }
 

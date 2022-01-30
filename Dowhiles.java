@@ -3,7 +3,7 @@ class Dowhiles {
   public static void main(String[] args) {
     int i = 1;
 
-    do {
+    do { //必ず最初に実行される
       System.out.println(i);
 
       i -= 2;

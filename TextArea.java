@@ -43,7 +43,31 @@ class TextArea extends JFrame implements ActionListener {
     setVisible(true);
   }
 
-  public static void main(String args[]) {
-    TextArea textarea = new TextArea();
-  }
+  	//イベント
+	public void actionPerformed(ActionEvent ae) {
+
+		//イベントオブジェクトからボタンの文字列を取得
+		String strCmd = ae.getActionCommand();
+
+		//ボタン「セット」が押された場合
+		if("セット".equals(strCmd)) {
+		//テキストエリアにセットする
+		  jtextShuukei.setText("デスクトップパソコン\n");
+		}
+		//ボタン「追記」が押された場合
+		else if ("追記".equals(strCmd)){
+		//テキストエリアに追記する
+		  jtextShuukei.append("プリンタ\n");	
+		}
+		//ボタン「取得」が押された場合
+		else if ("取得".equals(strCmd)){
+		  JOptionPane.showMessageDialog(this, jtextShuukei.getText());
+		}
+	}
+	
+	//mainメソッド
+	public static void main(String args[]) {
+		TextArea textarea = new TextArea();
+	}
 }
+

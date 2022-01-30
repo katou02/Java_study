@@ -1,5 +1,5 @@
 class Static1 {
-
+//static変数とstaticメソッドはオブジェクトに保持されずに別の場所にまとめて用意される
   public static void main(String[] args) {
     System.out.println(StaticTest.price);
 

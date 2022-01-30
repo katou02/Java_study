@@ -35,23 +35,24 @@ class CheckBox extends JFrame implements ActionListener {
     setVisible(true);
   }
 
-  public void actionPerformed(ActionEvent ae) {
-    String strCmd = ae.getActionCommand();
+ public void actionPerformed(ActionEvent ae) {
+   //イベントオブジェクトからボタンの文字列を取得
+	 String strCmd = ae.getActionCommand();
+		//ボタン「OK」が押された場合
+		if("OK".equals(strCmd)) {
+			//チェックボックスにチェックが入っている場合
+			if(checkShouhin.isSelected()){
+			  JOptionPane.showMessageDialog(this,"チェックボックスにチェックが入っています。");
+			}
+      else {
+			  JOptionPane.showMessageDialog(this,"チェックボックスにチェックは入っていません。");
+			}
+		}		
+	}
+	
+	//mainメソッド
+	public static void main(String args[]) {
 
-    if ("OK".equals(strCmd)) {
-      if (checkShouhin.isSelected()) {
-        JOptionPane.showMessageDialog(
-          this
-        );
-      } else {
-        JOptionPane.showMessageDialog(
-          this
-        );
-      }
-    }
-  }
-
-  public static void main(String args[]) {
-    CheckBox checkBox = new CheckBox();
-  }
+		CheckBox checkBox = new CheckBox();
+	}
 }

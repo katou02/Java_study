@@ -1,50 +1,68 @@
+//ƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚Ì’l
+
+//ƒpƒbƒP[ƒW‚ÌƒCƒ“ƒ|[ƒg
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.*;
 
-class TextSousa extends JFrame implements ActionListener {
+class TextSousa extends JFrame implements ActionListener{
 
-  JPanel panelShouhin;
+	JPanel panelShouhin;
 
-  JTextField textShouhin;
+	JTextField textShouhin;
 
-  JButton buttonSet, buttonGet;
+	JButton buttonSet, buttonGet;
+		
+	TextSousa() {
+	  setBounds(100, 100, 500, 300);
 
-  TextSousa() {
-    setBounds(100, 100, 500, 300);
+		setTitle("”„ã“ü—Í");
 
-    setTitle("ãƒ†ã‚­ã‚¹ãƒˆ");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Container cont = getContentPane();
 
-    Container cont = getContentPane();
+		cont.setLayout(new GridLayout(1,1));
 
-    cont.setLayout(new GridLayout(1, 1));
+		textShouhin = new JTextField(15);
 
-    textShouhin = new JTextField(15);
+		buttonSet = new JButton("ƒZƒbƒg");
+		buttonGet = new JButton("æ“¾");
 
-    buttonSet = new JButton("ãƒœã‚¿ãƒ³ã‚»ãƒƒãƒˆ");
-    buttonGet = new JButton("ãƒœã‚¿ãƒ³å–å¾—");
+		buttonSet.addActionListener(this);
+		buttonGet.addActionListener(this);
 
-    buttonSet.addActionListener(this);
-    buttonGet.addActionListener(this);
+		panelShouhin = new JPanel();
 
-    panelShouhin = new JPanel();
+		panelShouhin.add(textShouhin);
+		panelShouhin.add(buttonSet);
+		panelShouhin.add(buttonGet);
 
-    panelShouhin.add(textShouhin);
-    panelShouhin.add(buttonSet);
-    panelShouhin.add(buttonGet);
+		cont.add(panelShouhin);		
 
-    cont.add(panelShouhin);
+		setVisible(true);		
 
-    setVisible(true);
-  }
+	}
 
-  public void actionPerformed(ActionEvent ae) {
-    String strCmd = ae.getActionCommand();
-  }
+	//ƒCƒxƒ“ƒg
+	public void actionPerformed(ActionEvent ae) {
 
-  public static void main(String args[]) {
-    TextSousa texttousa = new TextSousa();
-  }
+		//ƒCƒxƒ“ƒgƒIƒuƒWƒFƒNƒg‚©‚çƒ{ƒ^ƒ“‚Ì•¶š—ñ‚ğæ“¾
+		String strCmd = ae.getActionCommand();
+		
+		//ƒ{ƒ^ƒ“u•\¦v‚ª‰Ÿ‚³‚ê‚½ê‡
+		if("ƒZƒbƒg".equals(strCmd)) {
+		  textShouhin.setText("ƒfƒXƒNƒgƒbƒvƒpƒ\ƒRƒ“");
+		}
+		//ƒ{ƒ^ƒ“uæ“¾v‚ª‰Ÿ‚³‚ê‚½ê‡
+		else if ("æ“¾".equals(strCmd)){
+		  JOptionPane.showMessageDialog(this, "ƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚Ì“à—eF" + textShouhin.getText());
+		}
+	}
+	
+	//mainƒƒ\ƒbƒh
+	public static void main(String args[]) {
+
+		TextSousa texttousa = new TextSousa();
+	}
 }

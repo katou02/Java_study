@@ -12,32 +12,32 @@ class Shoshiki extends JFrame {
   JPanel panelShouhin;
 
   Shoshiki() {
-    setBounds(100, 100, 500, 300);
+    setBounds(100, 100, 500, 300);//位置とサイズ
 
-    setTitle("書式");
+    setTitle("書式");//タイトル
 
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//終了ボタン
 
     Container cont = getContentPane();
 
-    cont.setLayout(new GridLayout(1, 1));
+    cont.setLayout(new GridLayout(1, 1));//1行1列
 
-    labelShouhin = new JLabel("書式");
+    labelShouhin = new JLabel("商品名");//ラベル
 
-    textShouhin = new JTextField(10);
+    textShouhin = new JTextField(10);//テキストフィールド
 
-    Font fontText = new Font("Serif", Font.BOLD, 20);
+    Font fontText = new Font("Serif", Font.BOLD, 20); //フォントボールド サイズは20
 
-    textShouhin.setFont(fontText);
+    textShouhin.setFont(fontText);//テキストフィールドにフォントを設定
 
-    textShouhin.setForeground(Color.RED);
+    textShouhin.setForeground(Color.RED); //テキストの色
 
-    textShouhin.setBackground(Color.YELLOW);
+    textShouhin.setBackground(Color.YELLOW); //背景色
 
-    buttonOk = new JButton("OK");
+    buttonOk = new JButton("OK");//OKボタン
 
     panelShouhin = new JPanel();
-
+//パネルの表示
     panelShouhin.add(labelShouhin);
     panelShouhin.add(textShouhin);
     panelShouhin.add(buttonOk);

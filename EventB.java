@@ -25,11 +25,11 @@ class EventB extends JFrame implements ActionListener {
 
     buttonOk = new JButton("OK");
 
-    buttonOk.addActionListener(this);
-    textShouhin.addActionListener(this);
+    buttonOk.addActionListener(this);//イベントを発生させる
+    textShouhin.addActionListener(this);//イベントを発生させる
 
     panelShouhin = new JPanel();
-
+//パネルにコンポーネント配置
     panelShouhin.add(textShouhin);
     panelShouhin.add(buttonOk);
 
@@ -42,11 +42,9 @@ class EventB extends JFrame implements ActionListener {
     Object obj = ae.getSource();
 
     if (obj == buttonOk) {
-      JOptionPane.showMessageDialog(this, "OK");
+      JOptionPane.showMessageDialog(this, "OKが押されました");
     } else if (obj == textShouhin) {
-      JOptionPane.showMessageDialog(
-        this
-      );
+      JOptionPane.showMessageDialog(this,"Enterが押されました");
     }
   }
 
